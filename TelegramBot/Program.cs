@@ -31,7 +31,89 @@ namespace TelegramBot
         {
             bot.OnMessage += Csharpcornerbotmessage;
             bot.StartReceiving();
-            Console.WriteLine("Bot is currently running...");
+
+            //Console.WriteLine("     ");
+            //Console.WriteLine("    (\\____/)");
+            //Console.WriteLine("     (_oo_)");
+            //Console.WriteLine("       (O)");
+            //Console.WriteLine("     __||__    \\)");
+            //Console.WriteLine("  []/______\\[] /");
+            //Console.WriteLine("  / \\______/ \\/");
+            //Console.WriteLine(" /    /__\\");
+            //Console.WriteLine("(\\   /____\\");
+
+            //Console.WriteLine("                                         |");
+            //Console.WriteLine("                                         |");
+            //Console.WriteLine("                                         |");
+            //Console.WriteLine("                                         |");
+            //Console.WriteLine("   _______                   ________    |");
+            //Console.WriteLine("  |ooooooo|      ____       | __  __ |   |");
+            //Console.WriteLine("  |[]+++[]|     [____]      |/  \\/  \\|   |");
+            //Console.WriteLine("  |+ ___ +|     ]()()[      |\\__/\\__/|   |");
+            //Console.WriteLine("  |:|   |:|   ___\\__/___    |[][][][]|   |");
+            //Console.WriteLine("  |:|___|:|  |__|    |__|   |++++++++|   |");
+            //Console.WriteLine("  |[]===[]|   |_|_/\\_|_|    | ______ |   |");
+            //Console.WriteLine("_ ||||||||| _ | | __ | | __ ||______|| __|");
+            //Console.WriteLine("  |_______|   |_|[::]|_|    |________|   \\");
+            //Console.WriteLine("              \\_|_||_|_/                  \\");
+            //Console.WriteLine("                |_||_|                     \\");
+            //Console.WriteLine("               _|_||_|_                     \\");
+            //Console.WriteLine("      ____    |___||___|                     \\");
+            //Console.WriteLine("     /  __\\          ____                     \\");
+            //Console.WriteLine("     \\( oo          (___ \\                     \\");
+            //Console.WriteLine("     _\\_o/           oo~)/");
+            //Console.WriteLine("    / \\|/ \\         _\\-_/_");
+            //Console.WriteLine("   / / __\\ \\___    / \\|/  \\");
+            //Console.WriteLine("   \\ \\|   |__/_)  / /  - \\ \\");
+            //Console.WriteLine("    \\/_)  |       \\ \\    /_/");
+            //Console.WriteLine("     ||___|        \\/___(_/");
+            //Console.WriteLine("     | | |          | |  |");
+            //Console.WriteLine("     | | |          | |  |");
+            //Console.WriteLine("     |_|_|          |_|__|");
+            //Console.WriteLine("     [__)_)        (_(___]");
+            //Console.WriteLine("                           ");
+
+            Console.WriteLine("                  ' -, __");
+            Console.WriteLine("                 `      `   ,");
+            Console.WriteLine("               --'    _,'' - ' ` ");
+            Console.WriteLine("                   '         `'");
+            Console.WriteLine("             `    /          ,'");
+            Console.WriteLine("               `  '--    ,-''");
+            Console.WriteLine("                `'`   |   \\");
+            Console.WriteLine("                   -  \\, |");
+            Console.WriteLine("                    `--Y '      ___ ");
+            Console.WriteLine("                         \\     L _, \\");
+            Console.WriteLine("               _ ,        `    <  <\\                _");
+            Console.WriteLine("             ,' '           `, `    | \\            ( `");
+            Console.WriteLine("            /, `             `  |     \\`            \\ \\_");
+            Console.WriteLine("         ,' ,                _ ,'    ||\\l            )  '' ");
+            Console.WriteLine("        , ,'   \\           ,' - `- _,'  |              _ _` ");
+            Console.WriteLine("      ,' /      \\ \\        `' ' `--/   | \\          / /     \\");
+            Console.WriteLine("     '  /        \\           |\\__ - _ ,'` `        / /     ` ` ");
+            Console.WriteLine("    |  '                     `-   -'   |   `-'      / /          ` ");
+            Console.WriteLine("    | /           |L__           |    |          / /          `  ` ");
+            Console.WriteLine("   , /                           |    |         / /             ` `");
+            Console.WriteLine("  / /          ,  ,` _ `-_       |    |  _   ,-' /               ` \\");
+            Console.WriteLine(" /             \\'`_/  `-_ \\_,   ,'    ");
+            Console.WriteLine("   '          -f    ,'   `    '        \\__ ---'     _    '   '     \\ \\");
+            Console.WriteLine("' /          ` '    l      ' /          \\        ,_|/   `   ,'`     L`");
+            Console.WriteLine("|'      _ -''` `     \\ _,'  `            \\ ` ___` ''`-   , |    |      | \\");
+            Console.WriteLine("||    ,'      `  `    '       _,    _        `  |    `/ '  |   '      |");
+            Console.WriteLine("||  ,'          `  ; , ---' ,'       `    `   `-'   -' /_  '    ;_   ||");
+            Console.WriteLine("|| '              V      / /           `   | `   ,'   ,' '     !  `  ||");
+            Console.WriteLine("||/            _,-------7 '                |  `-'    l         /    `||");
+            Console.WriteLine("  |          ,'  -   ,' ||               |  -         `        '     ||");
+            Console.WriteLine(" `'        ,'    `' '    |               |    `         '  - '       `'");
+            Console.WriteLine("          /      ,'      |               |,'    \\-  _, '/'");
+            Console.WriteLine("                /                                \\     ''");
+            Console.WriteLine("         `     |         `              /         :_,' '");
+            Console.WriteLine("          \\ `   \\   _     ,'-          '         /_ -'");
+            Console.WriteLine("           `- __ `,  `'      _ >----''   _  __  /");
+            Console.WriteLine("                 '        /''          |  ''   '_");
+            Console.WriteLine("               /_| -'\\ ,'              ' '`__'-( \\");
+            Console.WriteLine("                 / ,'''\\,'               `/   `- | ' ");
+
+            Console.WriteLine("InfyBot is currently running...");
             Console.ReadKey();
             bot.StopReceiving();
         }
@@ -56,7 +138,7 @@ namespace TelegramBot
                 var rnd = new Random();
                 string[] MyRandomArray = buttonItem.OrderBy(x => rnd.Next()).ToArray();
 
-                var keyboardMarkup = new ReplyKeyboardMarkup(GetInlineKeyboard(buttonItem));
+                var keyboardMarkup = new ReplyKeyboardMarkup(GetInlineKeyboard(MyRandomArray));
 
                 bot.SendTextMessageAsync(e.Message.Chat.Id, "Choose", replyMarkup: keyboardMarkup);
             }
@@ -92,6 +174,7 @@ namespace TelegramBot
             {
                 ReplyKeyboardRemove remove = new ReplyKeyboardRemove();
                 bot.SendTextMessageAsync(e.Message.Chat.Id, "Thank you for playing! 🤪", replyMarkup: remove);
+                answer = "";
             }
             else
             {
@@ -101,6 +184,7 @@ namespace TelegramBot
                     {
                         ReplyKeyboardRemove remove = new ReplyKeyboardRemove();
                         bot.SendTextMessageAsync(e.Message.Chat.Id, "🤩🦾 Correct!");
+                        answer = "";
 
                         var buttonItem = new[] { "/q", "/stop" };
                         var keyboardMarkup = new ReplyKeyboardMarkup(GetInlineKeyboard(buttonItem));
@@ -120,7 +204,8 @@ namespace TelegramBot
 
         public static string getQuestion()
         {
-            var url = $"https://opentdb.com/api.php?amount=1&category=18&difficulty=easy&type=multiple";
+            //var url = $"https://opentdb.com/api.php?amount=1&category=18&difficulty=easy&type=multiple";
+            var url = $"https://opentdb.com/api.php?amount=1&type=multiple";
             var webClient = new WebClient();
             string jsonData = "";
 
@@ -188,7 +273,7 @@ namespace TelegramBot
             if (res.Contains("*"))
                 return "🙄";
 
-            var url = $"https://www.botlibre.com/rest/api/form-chat?&application=3489886240519887734&instance=165&message=" + chat;
+            var url = $"https://www.botlibre.com/rest/api/form-chat?&application=3601139432728863732&instance=165&message=" + chat;
             var webClient = new WebClient();
             string jsonData = "";
             string reply = "";
