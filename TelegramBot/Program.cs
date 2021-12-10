@@ -273,7 +273,8 @@ namespace TelegramBot
             if (res.Contains("*"))
                 return "🙄";
 
-            var url = $"https://www.botlibre.com/rest/api/form-chat?&application=3601139432728863732&instance=165&message=" + chat;
+            //Get new application id from https://www.botlibre.com/api-test.jsp
+            var url = $"https://www.botlibre.com/rest/api/form-chat?&application=4289096168448888538&instance=165&message=" + chat;
             var webClient = new WebClient();
             string jsonData = "";
             string reply = "";
